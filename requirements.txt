@@ -1,0 +1,16 @@
+
+pytest
+ipywidgets
+pillow
+pillow
+pandas
+pandas
+requests
+fastapi[all]
+pytest-playwright
+playwright
+seaborn
+geopandas[all]
+mapclassify
+folium
+streamlit-folium
