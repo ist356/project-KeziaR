@@ -14,3 +14,4 @@ geopandas[all]
 mapclassify
 folium
 streamlit-folium
+wordcloud

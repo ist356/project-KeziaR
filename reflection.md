@@ -23,3 +23,4 @@ Examples:
 
 `--- Reflection Below This Line ---`
 
+This project was not easy, but it was interesting to put everything learned over the semester into one project. I am more confident with pulling from pulling data into another file. I will say that the data leftover after cleaning suprised me, since I started with 2999 rows and only ended up with 51. This could be caused by not caching the files properly, in the future I would like to implement caching better, so I do not use up the API requests. In the end to show off the difference between sentiments, having a bar plot was useful to show what sim 4 players think about the game. I would like to think having sentiment is useful to a company who wants to better their game's inadequacies like bugs, glitches, and unnecessary movements, while using the positive sentiments to continue what players enjoy. 

@@ -2,6 +2,7 @@ import pandas as pd
 import streamlit as st
 import requests
 import config
+import time
 
 # starting off by gaining access to the reddit API
 
@@ -28,7 +29,6 @@ headers = {
 TOKEN_ACCESS = 'https://www.reddit.com/api/v1/access_token'
 res = requests.post(TOKEN_ACCESS, 
                    auth=auth, data=data, headers=headers)
-
 
 if res.status_code == 200:
     TOKEN = res.json()['access_token']
@@ -62,6 +62,8 @@ def get_posts(endpoint, query, sort, limit=100):
         data_json = response.json()
         print(data_json)
 
+
+
         if 'data' not in data_json or 'children' not in data_json['data']:
             break
 
@@ -72,10 +74,13 @@ def get_posts(endpoint, query, sort, limit=100):
         if not after or len(all_posts) >= 1000:  # Stop after 1000 posts (or no more pages)
             break
 
+        time.sleep(2)
+
     return all_posts
 
 #----------------------------------------------
-query = 'title:"this game is" OR title:"I love" OR title:"I hate" OR title:"I like" OR title:"Unpopular Opinion"'
+query = 'title:"this game is" OR title:"I love" OR title:"I hate" OR title:"I like" OR title:"Unpopular Opinion" OR title:"best game"\
+    OR title:"good game" OR title:"bad game" OR title:"best game"'
 ENDPOINT = 'https://oauth.reddit.com/r/Sims4/search/'
 
 # Fetch posts for different sort types
@@ -85,7 +90,9 @@ new_posts = get_posts(ENDPOINT, query, 'new')
 
 # Combine all posts into one list 
 all_posts = top_posts + hot_posts + new_posts
-    
+
+
+
 
 #----------------------------------------------
 
@@ -107,7 +114,13 @@ df = pd.DataFrame([{
 #----------------------------------------------
 # Importing into a streamlit so I
 # can view the data better
-st.title("Sims 4 Subreddit Data")
-st.dataframe(df)
+
+
+#st.title("Sims 4 Subreddit Data")
+
+df = df.to_csv("Sims4_data.csv", index=False)
+
+
+
 
 

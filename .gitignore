@@ -7,8 +7,8 @@ __pycache__/
 *.so
 
 # Configuration files
-config.py
-red.py
+
+
 
 # Distribution / packaging
 .Python
