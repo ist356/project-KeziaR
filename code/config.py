@@ -1,5 +1,0 @@
-Client_ID = 'DKYUh_g8AYiXoJxH7Gr9PQ'
-Secret_Key = 'Ibj2uQU6ngJzgYY7YmpAb87IzxBs9w'
-auth1 = 'Fakester3000'
-auth2 = 'D0d3s1Mse%'
-APIKEY = '16485477d37af51a38074277'
