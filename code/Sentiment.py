@@ -3,7 +3,8 @@ import pandas as pd
 from Transform import df_clean
 import Api_calls
 import config
-from Transform import df_clean
+import nltk
+
 
 
 def get_azure_sentiment(text: str) -> dict:

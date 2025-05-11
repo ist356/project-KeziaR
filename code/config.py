@@ -1,5 +1,6 @@
-Client_ID = 'DKYUh_g8AYiXoJxH7Gr9PQ'
-Secret_Key = 'Ibj2uQU6ngJzgYY7YmpAb87IzxBs9w'
-auth1 = 'Fakester3000'
-auth2 = 'D0d3s1Mse%'
-APIKEY = '16485477d37af51a38074277'
+Client_ID = 'yArDsHl0cvDdwJXdzIMkFQ'
+Secret_Key = 'P1Gq9MYZAG-5X4FR4-A1IiD14Q6hpQ'
+auth1 = 'Responsible-Exam-613'
+auth2 = 'Heyguyshow123!'
+
+APIKEY = ''
